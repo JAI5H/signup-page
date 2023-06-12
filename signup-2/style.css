@@ -1,0 +1,168 @@
+/*
+   Code writing and design by: Amr Khaled
+   Insta: @jai5h
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0 20px;
+  background: #160f0a;
+  font-family: "Euclid Circular A";
+}
+
+button,input {
+  border: 0;
+  width: 100%;
+  height: 60px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+}
+
+@keyframes backgr {
+  100% {
+    translate: -50vw -55%;
+    scale: 1 1.1;
+  }
+}
+
+.backgr {
+  position: fixed;
+  top: 30%;
+  left: 0;
+  width: 3000px;
+  height: 1500px;
+  translate: 0% -50%;
+  animation: backgr 15s infinite alternate linear;
+}
+
+.signup {
+  position: relative;
+  z-index: 2;
+  top: 0;
+  box-sizing: border-box;
+  border: 1.5rem;
+  border-radius: 1.25rem;
+  left: 0;
+  width: 70%;
+  max-width: 456px;
+  padding: 100px 90px;
+  background-color: rgba(0, 0, 0, 0.32);
+  box-shadow: 0 0 5px
+  rgb(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.signup > h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: #024739;
+  }
+
+.signup > h3 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 0 30px;
+  color: rgb(255 255 255 / 40%);
+}
+
+.form {
+  margin: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.inputtext {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.inputtext span {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  left: 0;
+  font-size: 22px;
+  pointer-events: none;
+  color: rgb(255 255 255 / 40%);
+}
+
+.inputtext input {
+  padding: 0 24px 0 36px;
+  border-bottom: 2px solid #a7b0ae;
+  color: #dce7e5;
+  height: 72px;
+  }
+
+:is(input:focus, input:valid) ~ label {
+  translate: -40px -40px;
+  scale: 0.875;
+}
+
+input:focus {
+  border-color: #013223;
+}
+
+:is(input:focus, input:valid) ~ span {
+  color: #012e25;
+}
+
+.inputtext label {
+  position: absolute;
+  top: 50%;
+  left: 36px;
+  translate: 0 -50%;
+  color: #a7b0ae;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+input:focus ~ label {
+  color: #025b49;
+}
+
+
+.form button {
+  display: block;
+  justify-content: space-around;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0 24px;
+  border-radius: 6px;
+  background: #08241f;
+  color: #a7b0ae;
+  border: 0;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.form button{
+  background-color: rgb(255, 255, 255, .05);
+  box-shadow: 0 0 5px
+  rgb(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.signup p {
+  margin: 0 0 22px;
+  color: #778395;
+}
+
+.signup p > a {
+  color: #025b49;
+  text-decoration: none;
+}
